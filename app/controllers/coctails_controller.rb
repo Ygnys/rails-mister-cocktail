@@ -1,0 +1,4 @@
+class CoctailsController < ApplicationController
+
+
+end
