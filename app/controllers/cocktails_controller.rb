@@ -5,16 +5,21 @@ end
 
  def show
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
+    # redirect_to
+    # raise
   end
-
-def create
-  @coctail = Coctail.new(strong_params)
-end
 
 def new
   @cocktail = Cocktail.new
+end
+
+def create
+  @cocktail = Cocktail.new(strong_params)
   if @cocktail.save
     redirect_to cocktail_path(@cocktail)
+  else
+    render :new
   end
 end
 
