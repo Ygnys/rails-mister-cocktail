@@ -1,6 +1,9 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+
+#     cocktail[:name] == params[:name]
+
 end
 
  def show
@@ -22,7 +25,19 @@ def create
     render :new
   end
 end
+# def search
+#   raise
+#   @cocktails = cocktails.select do |id, cocktail|
+#     cocktail[:name] == params[:name]
+#   end
+# end
 
+def update
+    @restaurant = Restaurant.find(params[:id])
+  end
+def destroy
+   @coctail = Cocktail.find(params[:id])
+end
 
   private
 
