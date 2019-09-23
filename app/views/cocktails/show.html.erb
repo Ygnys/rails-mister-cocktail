@@ -9,9 +9,16 @@
     <%= dose.description %> of
     <%= dose.ingredient.name.capitalize %>
       <%= link_to 'delete dose', dose_path(dose), method: :delete, data: {confirm: 'are you sure?'}, class: 'btn btn-warning'  %>
-    </div>
+  </div>
+
     </div>
 <% end %>
+<div>
+<%= link_to 'delete a cocktail', cocktail_path(@cocktail), method: :delete, data: {confirm: 'are you sure?'}, class: 'btn btn-danger'  %>
+  </div>
+
+  <div>
+<%= link_to 'edit a cocktail', cocktail_path(@cocktail), method: :patch, class: 'btn btn-primary'  %>
   </div>
 </div>
 

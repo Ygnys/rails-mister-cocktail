@@ -18,10 +18,12 @@
         <%= link_to cocktail_path(cocktail) do %>
         <%= cl_image_tag cocktail.photo, height: 200, crop: :fill %>
         <% end %>
+        <%= link_to cocktail_path(cocktail) do %>
         <h2><%= cocktail.name.capitalize %></h2>
         <%cocktail.doses.each do |dose| %>
         <p><strong><%= dose.description %></strong> of
           <%= dose.ingredient.name %></p>
+          <% end %>
           <% end %>
         </div>
         <!--    <#%= link_to 'see cocktail', cocktail_path(cocktail), class: 'btn btn-primary' %> -->
@@ -33,6 +35,10 @@
     <div class="text-center my-5">
       <%= link_to 'add new cocktail', new_cocktail_path, class: 'btn btn-secondary' %>
 
-    </div>
+  <!--   </div>
+     <div class="text-center my-5">
+      <%#= link_to 'edit a cocktail', cocktails_path(@cocktail), class: 'btn btn-secondary' %>
+ -->
+   <!--  </div> -->
   </div>
 
